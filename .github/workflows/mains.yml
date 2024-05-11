@@ -6,7 +6,7 @@
         run: |
           aws ecs register-task-definition \
             --family nginx-task \
-            --container-definitions '[{"name":"new-repo","image":"905418310808.dkr.ecr.us-east-2.amazonaws.com/abc:github.sha","portMappings":[{"containerPort":80}],"memoryReservation":128}]'
+            --container-definitions '[{"name":"abc","image":"905418310808.dkr.ecr.us-east-2.amazonaws.com/abc:github.sha","portMappings":[{"containerPort":80}],"memoryReservation":128}]'
      # Step to create ECS service
       - name: Create ECS Service
         run: |
